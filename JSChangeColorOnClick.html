@@ -1,0 +1,26 @@
+<!-- The following changes the color of div -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#container{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+}
+</style>
+<body>
+    <div id="container"></div>
+    <button onclick="Change()">Click</button>
+</body>
+<script>
+    function Change(){
+        let a = document.getElementById("container");
+        a.style.backgroundColor = "red";
+    }
+</script>
+</html>
