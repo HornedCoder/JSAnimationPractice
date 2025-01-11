@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .main-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-size: larger;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: beige;
+    }
+    #countdown{
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class = "main-box">
+        <div id = "countdown">
+        </div>
+        <div id="content">
+            Until 2026
+        </div>
+    </div>
+    
+    <script>
+        const targetTime = new Date("2026-01-01T00:00:00");
+
+        function updateCountdown(){
+            const currTime = new Date();
+
+            timeDiff = targetTime - currTime;
+            const days = Math.floor(timeDiff / (24*60*60*1000))
+            const hr = Math.floor((timeDiff % (24*1000*60*60)) / (1000*60*60))
+            const min = Math.floor((timeDiff % (1000*60*60)) / (1000*60))
+            const sec = Math.floor((timeDiff % (1000*60)) / (1000))
+
+            document.getElementById('countdown').innerHTML = `${days} d ${hr} h ${min} m ${sec} s`
+            setTimeout(updateCountdown, 1000)
+        }
+
+        updateCountdown()
+    </script>
+</body>
+</html>
