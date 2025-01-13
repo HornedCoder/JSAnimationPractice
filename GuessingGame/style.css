@@ -1,0 +1,38 @@
+body{
+    background-color: azure;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    background-color: rgb(119, 80, 186);
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid rgb(106, 139, 150);
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+
+}
+
+#inputNumber{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#submit{
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+p{
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
